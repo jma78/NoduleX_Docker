@@ -6,8 +6,8 @@ will create dir in /data/ called "built_dataset"
 /NoduleX_code/dicom_and_image_tools/simplify-doi-structure.sh -s /NoduleX_code/data/DOI /NoduleX_code/data/built_dataset
 
 # Step 2: Create Segmentation Masks(DICOM format)
-will create dir in /data/ called "binary_dicom"
-process in batch: run2.sh
+will create dir in /data/ called "binary_dicom"  
+process in batch: run2.sh  
 ‘’‘
 for n in `ls -d data/built_dataset/*` ; do \
     echo "Converting nodule $n" ; \
@@ -19,8 +19,8 @@ for n in `ls -d data/built_dataset/*` ; do \
 ;done
 ’‘’
 # Step 3: Convert DICOM to Analyze format
-will create dir in /data/ called "binary_analyze"
-run: run.sh
+will create dir in /data/ called "binary_analyze"  
+run: run.sh  
 '''
 p=LIDC-IDRI-0011; \
 for n in `ls -d data/binary_dicom/$p/*` ; do \
