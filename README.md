@@ -10,7 +10,7 @@ will create dir in /data/ called "built_dataset"
 # Step 2: Create Segmentation Masks(DICOM format)
 (temporarily upload zip file from host to container)
 will create dir in /data/ called "binary_dicom"  
-process in batch: run2.sh  
+process in batch: create_seg_masks.sh  
 '''  
 for n in `ls -d data/built_dataset/*` ; do \
     echo "Converting nodule $n" ; \
@@ -24,7 +24,7 @@ for n in `ls -d data/built_dataset/*` ; do \
 
 # Step 3: Convert DICOM to Analyze format
 will create dir in /data/ called "binary_analyze"  
-run: run.sh  
+run: dicom_to_analyze.sh  
 '''  
 p=LIDC-IDRI-0011; \
 for n in `ls -d data/binary_dicom/$p/*` ; do \
