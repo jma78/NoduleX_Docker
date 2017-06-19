@@ -18,4 +18,4 @@ scipy==0.18.1
 SimpleITK==0.10.0
 six
 sklearn==0.0
-Theano==0.9.0.dev4
+Theano==0.9.0
