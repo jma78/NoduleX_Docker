@@ -3,9 +3,12 @@ Containerize the process from https://github.com/jcausey-astate/NoduleX_code
 
 # Step 1: Build dataset
 will create dir in /data/ called "built_dataset"  
-/NoduleX_code/dicom_and_image_tools/simplify-doi-structure.sh -s /NoduleX_code/data/DOI /NoduleX_code/data/built_dataset
+/NoduleX_code/dicom_and_image_tools/simplify-doi-structure.sh -s /NoduleX_code/data/DOI /NoduleX_code/data/built_dataset  
+"DOI" contains the proginal data downloaded from https://wiki.cancerimagingarchive.net/display/Public/LIDC-IDRI  
+"built_dataset" contains dataset built to a flattened directory structure  
 
 # Step 2: Create Segmentation Masks(DICOM format)
+(temporarily upload zip file from host to container)
 will create dir in /data/ called "binary_dicom"  
 process in batch: run2.sh  
 '''  
