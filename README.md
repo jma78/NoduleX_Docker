@@ -2,13 +2,13 @@
 Containerize of the process from https://github.com/jcausey-astate/NoduleX_code
 
 # Step 1: Build dataset
-will create dir in /data/ called "built_dataset"
+will create dir in /data/ called "built_dataset"  
 /NoduleX_code/dicom_and_image_tools/simplify-doi-structure.sh -s /NoduleX_code/data/DOI /NoduleX_code/data/built_dataset
 
 # Step 2: Create Segmentation Masks(DICOM format)
 will create dir in /data/ called "binary_dicom"  
 process in batch: run2.sh  
-‘’‘
+‘’‘  
 for n in `ls -d data/built_dataset/*` ; do \
     echo "Converting nodule $n" ; \
     python dicom_and_image_tools/segment_to_binary_image.py --candidates data/nodule_lists/S1vS45_TRAIN_candidates.txt --segmented-only \
@@ -16,12 +16,12 @@ for n in `ls -d data/built_dataset/*` ; do \
         "data/binary_dicom/$(basename $n)" \
         && echo "OK" \
         || echo "FAILED converting nodule $n" \
-;done
+;done  
 ’‘’
 # Step 3: Convert DICOM to Analyze format
 will create dir in /data/ called "binary_analyze"  
 run: run.sh  
-'''
+'''  
 p=LIDC-IDRI-0011; \
 for n in `ls -d data/binary_dicom/$p/*` ; do \
     echo "Converting nodule $n" ; \
@@ -30,7 +30,7 @@ for n in `ls -d data/binary_dicom/$p/*` ; do \
         "data/binary_analyze/$p/$(basename $n)" \
         && echo "OK" \
         || echo "FAILED converting nodule $n" \
-;done
+;done  
 '''
 
 # Step 4: QIF feature extraction
