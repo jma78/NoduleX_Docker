@@ -30,7 +30,12 @@ RUN pip --no-cache-dir install h5py
 
 RUN pip install --upgrade html5lib==1.0b8
 
-WORKDIR "/root"
+# WORKDIR "/root"
+
+RUN mkdir /root/medpy
+WORKDIR /root/medpy
+RUN git clone https://github.com/loli/medpy.git .
+RUN python setup.py develop
 
 RUN mkdir -p /root/src
 
