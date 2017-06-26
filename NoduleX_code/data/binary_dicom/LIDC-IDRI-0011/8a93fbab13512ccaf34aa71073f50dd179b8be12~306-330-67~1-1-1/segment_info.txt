@@ -1,2 +1,0 @@
-Segmentation Centroid: malignancy, x, y, z, sliceNo, totalSlices
-1, 305.912700966, 330.289741752, 66.6687116564, 67, 128
