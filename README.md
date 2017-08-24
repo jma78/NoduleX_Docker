@@ -21,8 +21,8 @@ for n in `ls -d data/built_dataset/*` ; do \
         || echo "FAILED converting nodule $n" \
 ;done  
 ’‘’
-To build the docker image, run
-docker build -t segmask .
+To build the docker image, run  
+docker build -t segmask .  
 
 # Step 3: Convert DICOM to Analyze format
 will create dir in /data/ called "binary_analyze"  
@@ -38,9 +38,9 @@ for n in `ls -d data/binary_dicom/$p/*` ; do \
         || echo "FAILED converting nodule $n" \
 ;done  
 '''
-To build docker image, run
-docker build -t analyze .
-
+To build docker image, run  
+docker build -t analyze .  
+ 
 # Step 4: QIF feature extraction
 This part involves dockerizing Feature Extraction process.  
 TODO: wirte a script to change directory structure and naming convention in order to run the code properly.  
