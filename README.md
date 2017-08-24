@@ -20,7 +20,7 @@ for n in `ls -d data/built_dataset/*` ; do \
         && echo "OK" \
         || echo "FAILED converting nodule $n" \
 ;done  
-’‘’
+’‘’  
 To build the docker image, run  
 docker build -t segmask .  
 
@@ -37,7 +37,7 @@ for n in `ls -d data/binary_dicom/$p/*` ; do \
         && echo "OK" \
         || echo "FAILED converting nodule $n" \
 ;done  
-'''
+'''  
 To build docker image, run  
 docker build -t analyze .  
  
