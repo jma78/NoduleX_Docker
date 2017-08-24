@@ -42,7 +42,7 @@ To build docker image, run
 docker build -t analyze .
 
 # Step 4: QIF feature extraction
-This part involves dockerizing Feature Extraction process. 
-TODO: wirte a script to change directory structure and naming convention in order to run the code properly.
-Docker image already built, run
-docker build -t octave .
+This part involves dockerizing Feature Extraction process.  
+TODO: wirte a script to change directory structure and naming convention in order to run the code properly.  
+Docker image already built, run  
+docker build -t octave .  
